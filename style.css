@@ -207,7 +207,7 @@ header {
 }
 
 .header-image-lg {
-  width: 30rem;
+  width: 29rem;
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -265,4 +265,77 @@ header {
 .header-frames:hover .header-frame:nth-child(2) {
   top: 0;
   left: 22rem;
+}
+
+/*============================ABOUT=====================*/
+#about {
+  margin-top: 20rem;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 43% 53%;
+  gap: 4%;
+}
+
+.about-left {
+  position: relative;
+}
+
+.about-image-bg {
+  width: 16rem;
+  height: 24rem;
+  background-color: var(--color-bg-4);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.about-image-lg {
+  width: 30rem;
+  position: relative;
+  left: 1rem;
+  bottom: 1rem;
+  filter: saturate(0) brightness(0.5);
+  transition: var(--transition);
+}
+
+.about-image-md {
+  width: 22rem;
+  height: 22rem;
+  position: absolute;
+  left: 15rem;
+  top: 8rem;
+  overflow: hidden;
+  box-shadow: 2rem 2rem 2rem rgba(0 0 0 / 0.2);
+  transition: var(--transition);
+}
+
+.about-left:hover .about-image-md {
+  opacity: 0;
+}
+
+.about-left:hover .about-image-lg {
+  filter: saturate(1) brightness(1);
+  border: 1rem solid var(--color-bg-4);
+  box-shadow: 1rem 1rem 3rem rgba(0 0 0 / 0.2);
+  bottom: 0;
+  left: 0;
+}
+
+.about-right {
+  margin-left: 5rem;
+}
+
+.about-title {
+  margin-bottom: 3rem;
+}
+
+.about-right p {
+  margin-bottom: 1.5rem;
+  width: 93%;
+}
+
+.about-btn {
+  margin-top: 1.5rem;
 }
