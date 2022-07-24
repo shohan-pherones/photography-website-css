@@ -64,7 +64,7 @@ a:hover {
 
 .container {
   width: var(--container-width-lg);
-  margin: o auto;
+  margin: 0 auto;
   max-width: 2160px;
 }
 
@@ -165,4 +165,104 @@ header {
   display: grid;
   grid-template-columns: 53% 43%;
   gap: 4%;
+  margin-top: 10rem;
+  position: relative;
+}
+
+.header-hashtag {
+  color: var(--color-primary-variant);
+}
+
+.header-left p {
+  margin-top: 2rem;
+  width: 85%;
+}
+
+.header-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: var(--color-primary-variant);
+  color: var(--color-bg-4);
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  border-radius: 2rem;
+}
+
+.header-btn:hover {
+  color: var(--color-light);
+  background-color: var(--color-bg-4);
+}
+
+.header-btn:active {
+  outline: 0.5rem solid var(--color-light);
+}
+
+.header-image-bg {
+  width: 16rem;
+  height: 22rem;
+  background-color: var(--color-bg-4);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.header-image-lg {
+  width: 30rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  filter: saturate(0) brightness(0.5);
+  transition: var(--transition);
+}
+
+.header-image-md {
+  width: 28rem;
+  height: 28rem;
+  overflow: hidden;
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+  transition: var(--transition);
+}
+
+.header-right:hover .header-image-md {
+  opacity: 0;
+}
+
+.header-right:hover .header-image-lg {
+  filter: saturate(1) brightness(1);
+  border: 1rem solid var(--color-bg-4);
+  top: 0;
+  right: 0;
+}
+
+.header-frames {
+  position: absolute;
+  top: 75vh;
+  left: 25rem;
+}
+
+.header-frame {
+  width: 20rem;
+  border: 0.5rem solid var(--color-bg-3);
+  box-shadow: 0 0 5rem rgba(0 0 0 / 0.5);
+  position: absolute;
+  transform: rotate(-10deg);
+  transform-origin: bottom left;
+  transition: var(--transition);
+}
+
+.header-frame:nth-child(2) {
+  transform: rotate(20deg);
+  top: -2rem;
+  left: -2rem;
+}
+
+.header-frames:hover .header-frame {
+  transform: rotate(0);
+}
+
+.header-frames:hover .header-frame:nth-child(2) {
+  top: 0;
+  left: 22rem;
 }
