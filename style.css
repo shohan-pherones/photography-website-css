@@ -365,10 +365,92 @@ header {
 .gallery-image {
   width: 32rem;
   border: 1rem solid var(--color-bg-4);
+}
+
+.gallery-image img {
   filter: saturate(0) brightness(0.5);
   transition: var(--transition);
 }
 
-.gallery-image:hover {
+.gallery-image:hover img {
   filter: saturate(1) brightness(1);
+}
+
+/*============================COLLAGE=====================*/
+#collage {
+  margin-top: 15rem;
+  /* margin-bottom: 10rem; */
+}
+
+.collage-head {
+  text-align: right;
+}
+
+.collage-head h2 {
+  margin-bottom: 2rem;
+}
+
+.collage-head p {
+  padding-left: 50%;
+  margin-bottom: 5rem;
+}
+
+.collage-images {
+  display: grid;
+  grid-template-areas:
+    "a b c"
+    "d e g"
+    "f f g"
+    "f f g";
+  gap: 3rem;
+}
+
+.collage-image:nth-child(1) {
+  grid-area: a;
+}
+
+.collage-image:nth-child(2) {
+  grid-area: b;
+}
+
+.collage-image:nth-child(3) {
+  grid-area: e;
+}
+
+.collage-image:nth-child(4) {
+  grid-area: c;
+}
+
+.collage-image:nth-child(5) {
+  grid-area: d;
+}
+
+.collage-image:nth-child(6) {
+  grid-area: f;
+}
+
+.collage-image:nth-child(7) {
+  grid-area: g;
+}
+
+.collage-image {
+  border: 1rem solid var(--color-bg-4);
+}
+
+.collage-image img {
+  height: 100%;
+  filter: saturate(0) brightness(0.5);
+  transition: var(--transition);
+}
+
+.collage-image:hover img {
+  filter: saturate(1) brightness(1);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  /* border-top: 0.5rem solid var(--color-bg-4); */
 }
