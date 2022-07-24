@@ -339,3 +339,36 @@ header {
 .about-btn {
   margin-top: 1.5rem;
 }
+
+/*============================GALLERY=====================*/
+#gallery {
+  margin-top: 15rem;
+}
+
+.gallery-head h2 {
+  margin-bottom: 2rem;
+}
+
+.gallery-head p {
+  width: 50%;
+  margin-bottom: 5rem;
+}
+
+.gallery-images {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  place-items: center;
+}
+
+.gallery-image {
+  width: 32rem;
+  border: 1rem solid var(--color-bg-4);
+  filter: saturate(0) brightness(0.5);
+  transition: var(--transition);
+}
+
+.gallery-image:hover {
+  filter: saturate(1) brightness(1);
+}
