@@ -78,9 +78,6 @@ img {
 nav {
   width: 100vw;
   height: calc(16px * 5);
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   display: grid;
   place-items: center;
   position: fixed;
@@ -90,7 +87,6 @@ nav {
   background: var(--color-bg-2);
   border-bottom: 0.2rem solid var(--color-bg-3);
   box-shadow: 0 0.2rem 0.7rem rgba(0 0 0 / 0.3);
-  /* box-shadow: 0 0.2rem 0.7rem rgba(0, 0, 0, 0.3); */
 }
 
 .nav-container {
@@ -120,8 +116,6 @@ nav {
 .nav-socials a {
   width: 2rem;
   height: 2rem;
-  /* display: grid;
-  place-items: center; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,19 +141,6 @@ header {
   background: linear-gradient(var(--color-bg-3), var(--color-bg-1));
   overflow: hidden;
 }
-
-/* .header-container {
-  display: flex;
-  gap: 10%;
-}
-
-.header-left {
-  flex-basis: 50%;
-}
-
-.header-right {
-  flex-basis: 40%;
-} */
 
 .header-container {
   display: grid;
@@ -207,7 +188,7 @@ header {
 }
 
 .header-image-lg {
-  width: 29rem;
+  width: 28rem;
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -216,8 +197,8 @@ header {
 }
 
 .header-image-md {
-  width: 28rem;
-  height: 28rem;
+  width: 26rem;
+  height: 26rem;
   overflow: hidden;
   position: absolute;
   top: 10rem;
@@ -239,7 +220,7 @@ header {
 .header-frames {
   position: absolute;
   top: 75vh;
-  left: 25rem;
+  left: 25vw;
 }
 
 .header-frame {
@@ -264,7 +245,7 @@ header {
 
 .header-frames:hover .header-frame:nth-child(2) {
   top: 0;
-  left: 22rem;
+  left: 21rem;
 }
 
 /*============================ABOUT=====================*/
@@ -284,7 +265,7 @@ header {
 
 .about-image-bg {
   width: 16rem;
-  height: 24rem;
+  height: 22rem;
   background-color: var(--color-bg-4);
   position: absolute;
   left: 0;
@@ -292,8 +273,8 @@ header {
 }
 
 .about-image-lg {
-  width: 30rem;
-  position: relative;
+  width: 28rem;
+  position: absolute;
   left: 1rem;
   bottom: 1rem;
   filter: saturate(0) brightness(0.5);
@@ -351,19 +332,18 @@ header {
 
 .gallery-head p {
   width: 50%;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .gallery-images {
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
+  gap: 2rem;
   place-items: center;
 }
 
 .gallery-image {
-  width: 32rem;
+  width: 25rem;
   border: 1rem solid var(--color-bg-4);
 }
 
@@ -379,7 +359,6 @@ header {
 /*============================COLLAGE=====================*/
 #collage {
   margin-top: 15rem;
-  /* margin-bottom: 10rem; */
 }
 
 .collage-head {
@@ -392,7 +371,7 @@ header {
 
 .collage-head p {
   padding-left: 50%;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .collage-images {
@@ -402,7 +381,7 @@ header {
     "d e g"
     "f f g"
     "f f g";
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .collage-image:nth-child(1) {
@@ -452,5 +431,4 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 5rem;
-  /* border-top: 0.5rem solid var(--color-bg-4); */
 }
