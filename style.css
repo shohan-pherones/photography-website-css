@@ -431,9 +431,10 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 5rem;
+  text-align: center;
 }
 
-/*==================MEDIA QUERIES (medium devices)============*/
+/*====================MEDIA QUERY (medium devices)===========*/
 @media screen and (max-width: 1366px) {
   .gallery-images {
     grid-template-columns: repeat(2, 1fr);
@@ -470,7 +471,8 @@ footer {
 
   header {
     background: none;
-    padding-top: 10rem;
+    padding-top: 5rem;
+    height: fit-content;
   }
 
   .header-image-bg,
@@ -490,6 +492,7 @@ footer {
 
   #about {
     margin-top: 0;
+    padding-top: 10rem;
   }
 
   .about-image-bg,
@@ -498,9 +501,9 @@ footer {
   }
 
   .about-image-lg {
-    top: 0;
-    left: 0;
     filter: saturate(1) brightness(1);
+    left: 0;
+    top: 0;
   }
 
   .about-left:hover .about-image-lg {
@@ -512,12 +515,22 @@ footer {
     margin-left: 3rem;
   }
 
+  #gallery {
+    margin-top: 0;
+    padding-top: 10rem;
+  }
+
   .gallery-head {
     text-align: center;
   }
 
   .gallery-head p {
     width: 100%;
+  }
+
+  #collage {
+    margin-top: 0;
+    padding-top: 10rem;
   }
 
   .collage-head {
@@ -530,25 +543,21 @@ footer {
 }
 
 @media screen and (max-width: 978px) {
-  .header-image-lg {
-    width: 20rem;
-  }
-
-  .about-image-lg {
-    width: 20rem;
-  }
-
+  .header-image-lg,
+  .about-image-lg,
   .gallery-image {
     width: 20rem;
   }
 }
 
-/*==================MEDIA QUERIES (small devices)============*/
+/*====================MEDIA QUERY (small devices)===========*/
 @media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   header {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    height: fit-content;
+    padding: 3rem;
   }
 
   .header-container {
@@ -558,12 +567,12 @@ footer {
     text-align: center;
   }
 
-  .header-left {
-    order: 1;
-  }
-
   .header-container p {
     width: 100%;
+  }
+
+  .header-left {
+    order: 1;
   }
 
   .header-image-lg {
@@ -571,14 +580,9 @@ footer {
     margin-bottom: 3rem;
   }
 
-  #about {
-    margin-top: 10rem;
-  }
-
   .about-container {
     grid-template-columns: 1fr;
     place-items: center;
-    padding-bottom: 3rem;
   }
 
   .about-image-lg {
@@ -601,10 +605,10 @@ footer {
 
   .collage-images {
     gap: 0.5rem;
-    animation: layoutChange 5s linear infinite;
+    animation: layout-change 20s linear infinite;
   }
 
-  @keyframes layoutChange {
+  @keyframes layout-change {
     0% {
       grid-template-areas:
         "d e a"
@@ -650,12 +654,19 @@ footer {
     border-width: 0.5rem;
   }
 
-  footer p {
-    text-align: center;
+  .collage-image img {
+    filter: saturate(0) brightness(0.3);
+    animation: color-change 20s linear infinite;
+  }
+
+  @keyframes color-change {
+    to {
+      filter: saturate(1) brightness(1);
+    }
   }
 }
 
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 400px) {
   h1 {
     font-size: 3rem;
   }
